@@ -1,0 +1,89 @@
+body {
+    justify-content: center;
+    align-items: center;
+    padding: 15px 15px 15px;
+}
+
+h1 {
+    color: #003366;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 0;
+    margin: 12px 0;
+}
+
+.panel {
+    width: 60%;
+    padding: 10px;
+    background-color: #eeeeee;
+    box-sizing: border-box;
+    border-top: 2px solid #bbbbbb;
+    border-right: 2px solid #bbbbbb;
+    border-bottom: 2px solid #bbbbbb;
+    border-left: 2px solid #bbbbbb;
+}
+
+input[type=number] {
+    width: 10%;
+    padding: 3px 3px;
+    margin: 2px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline-color: #024486;
+}
+
+input[type=text] {
+    width: 15%;
+    padding: 3px 3px;
+    margin: 1px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline-color: #024486;
+}
+
+#activity {
+    padding: 3px 3px;
+    margin: 1px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline-color: #024486;
+}
+
+.submit {
+    width: 25%;
+    background-color: #024486;
+    color: white;
+    padding: 5px 10px;
+    margin: 2px 0;
+    border: outset;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.reset {
+    width: 15%;
+    background-color: #024486;
+    color: white;
+    padding: 5px 10px;
+    margin: 2px 0;
+    border: outset;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+.hidden {
+    display: none;
+}
+
