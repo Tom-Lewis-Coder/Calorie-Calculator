@@ -12,7 +12,7 @@ h1 {
     margin: 12px 0;
 }
 
-.panel {
+.panel1, .panel2 {
     width: 60%;
     padding: 10px;
     background-color: #eeeeee;
@@ -79,7 +79,11 @@ input[type=text] {
     box-sizing: border-box;
 }
 
-button:hover {
+input[type=submit]:hover {
+    background-color: #003366;
+}
+
+input[type=reset]:hover {
     background-color: #003366;
 }
 
