@@ -6,16 +6,18 @@
 </head>
 <body>
     <div class="app-wrap">
+
         <header>
             <h1>Calorie Calculator</h1>
-            <p>This calculator can be used to estimate how many calories a person should consume 
-                each day to reach a target weight.</p>
+            <p>This calculator can be used to estimate how many calories you burn each day.</p>
             <p>Modify the values and click <i>Calculate</i> to use.</p>
         </header>
+
         <main>
-          <div class="panel">
-            <form id="caloriesForm" method="POST" action="main.js" name="form1">
+          <div class="panel1">
+            <form id="caloriesForm1" method="POST" action="main.js" name="form1">
                     <input type="hidden" name="userType" id="userType"/>
+
                             <label>Age</label>
                             <input type="number" name="userAge" id="userAge" min="15" max="80" />
                             <label>15 - 80</label><br><br>
@@ -46,14 +48,39 @@
                                     <option value="1.725">Very Active: intense exercise 6/7 x per week</option>
                                     <option value="1.9">Extremely Active: intense exercise daily or physical job</option>
                                 </select><br><br>
-
+ 
                             <input type="submit" value="Calculate" class="submit" />
                             <input type="reset" value="Clear" class="reset" />
             </form>
+
           </div>
           <div id="resultsContainer" class="hidden" class="results-container hidden">
             <p id="dailyCaloriesDisplay" class="finalNumberStyling"></p>
         </div>
+
+        <p>This next calculator can be used to estimate how many calories you should consume each day 
+            to reach a target weight. <br> Healthy weightloss/gain should be no more that 3 to 4 kilos a month. <br> <br>
+            This calculator is for informational purposes only, please consult a healthcare professional before undertaking 
+            any dietry decisions. </p>
+
+          <div class="panel2">
+                <form id="caloriesForm2" method="POST" action="main.js" name="form2">
+                        <input type="hidden" name="userCals" id="userCals"/>
+
+                        <label>Weight Goal</label>
+                        <input type="text" name="weightGoal" id="weightGoal" />
+                        <label>kg</label><br><br>
+
+                        <lable>Time Frame</lable>
+                        <input type="number" name="timeframe" id="timeframe" min ="1" />
+                        <label>Months</label><br><br>
+
+                        <input type="submit" value="Calculate" class="submit" />
+                        <input type="reset" value="Clear" class="reset" />
+            
+                </form>
+
+         </div>   
         </main>
     </div>
     <script src="main.js"></script>
