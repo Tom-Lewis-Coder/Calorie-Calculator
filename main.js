@@ -1,5 +1,14 @@
 "use strict";
 
+const validateForm1 = () => {
+    let x = document.forms["form1"]["userAge"].value;
+    let y = document.forms["form1"]["userHeight"].value;
+    let z = document.forms["form1"]["userWeight"].value;
+    if (x == "" || y =="" || z =="") {
+      alert("Please ensure all fields are completed")
+    }
+  }
+
 const calcAge = age => age * 5;
 const calcHeight = height => height * 6.25;
 const calcWeight = weight => weight * 10;
@@ -26,6 +35,14 @@ document.getElementById('caloriesForm1').addEventListener('submit', function(eve
     )
 });
 
+  const validateForm2 = () => {
+    let x = document.forms["form2"]["weightGoal"].value
+    let y = document.forms["form2"]["timeFrame"].value;
+    if (x == "" || y =="") {
+        alert("Please ensure all fields are completed")
+    }
+}
+
 const calDiff = (weightGoal, weight) => (weightGoal - weight) * 7700;
 const inDays = timeFrame => timeFrame * 30;
 const dailyCals = (calDiff, inDays) => Math.round(calDiff / inDays);
@@ -42,7 +59,7 @@ document.getElementById('caloriesForm2').addEventListener('submit', function(eve
     displayResults2(
         dailyCals(
             calDiff(parseInt(document.getElementById('weightGoal').value, 10), 
-                          parseInt(document.getElementById('userWeight').value, 10)),
+                    parseInt(document.getElementById('userWeight').value, 10)),
             inDays(parseInt(document.getElementById('timeFrame').value, 10))
         ),
         tdeeCalc(
@@ -54,6 +71,7 @@ document.getElementById('caloriesForm2').addEventListener('submit', function(eve
         )
     )
 });
+
 
 
 
