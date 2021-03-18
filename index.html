@@ -14,8 +14,8 @@
         </header>
 
         <main>
-          <div class="panel1">
-            <form id="caloriesForm1" method="POST" action="main.js" name="form1">
+            <div class="panel1">
+                <form id="caloriesForm1" method="POST" action="main.js" name="form1" onsubmit="return validateForm1()" >
                     <input type="hidden" name="userType" id="userType"/>
 
                             <label>Age</label>
@@ -31,11 +31,11 @@
                             <label>Female</label><br><br>
 
                             <label>Height</label>
-                            <input type="text" name="userHeight" id="userHeight" />
+                            <input type="text" name="userHeight" id="userHeight" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /> 
                             <label>cm</label><br><br>
 
                             <label>Weight</label>
-                            <input type="text" name="userWeight" id="userWeight" />
+                            <input type="text" name="userWeight" id="userWeight" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" /> 
                             <label>kg</label><br><br>
 
                             <label>Activity</label>
@@ -51,28 +51,27 @@
  
                             <input type="submit" value="Calculate" class="submit" />
                             <input type="reset" value="Clear" class="reset" />
-            </form>
-
-          </div>
-          <div id="resultsContainer" class="hidden" class="results-container hidden">
-            <p id="dailyCaloriesDisplay" class="finalNumberStyling"></p>
-        </div>
+                </form>
+                    <div id="resultsContainer" class="hidden" class="results-container hidden">
+                        <p id="dailyCaloriesDisplay" class="finalNumberStyling"></p>
+                    </div>
+            </div>
 
         <p>This next calculator can be used to estimate how many calories you should consume each day 
-            to reach a target weight. <br> Healthy weightloss/gain should be no more that 3 to 4 kilos a month. <br> <br>
+            to reach a target weight. <br> Healthy weightloss/gain should be no more that 3 to 4 kilos a month. <br><br>
             This calculator is for informational purposes only, please consult a healthcare professional before undertaking 
-            any dietry decisions. </p>
+            any dietary decisions. </p>
 
-          <div class="panel2">
-                <form id="caloriesForm2" method="POST" action="main.js" name="form2">
+            <div class="panel2">
+                <form id="caloriesForm2" method="POST" action="main.js" name="form2" onsubmit="return validateForm2()" >
                         <input type="hidden" name="userCals" id="userCals"/>
 
                         <label>Weight Goal</label>
-                        <input type="text" name="weightGoal" id="weightGoal" />
+                        <input type="text" name="weightGoal" id="weightGoal" pattern="\d.*" />
                         <label>kg</label><br><br>
 
                         <lable>Time Frame</lable>
-                        <input type="number" name="timeframe" id="timeframe" min ="1" />
+                        <input type="number" name="timeFrame" id="timeFrame" min ="1" />
                         <label>Months</label><br><br>
 
                         <input type="submit" value="Calculate" class="submit" />
@@ -80,7 +79,10 @@
             
                 </form>
 
-         </div>   
+                <div id="resultsContainer2" class="hidden" class="results-container2 hidden">
+                    <p id="dailyDefecitDisplay" class="finalNumberStyling"></p>
+                </div>
+            </div>   
         </main>
     </div>
     <script src="main.js"></script>
